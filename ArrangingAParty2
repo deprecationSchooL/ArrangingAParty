@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class ArrangingAParty2 {
+		public static void main(String[] args) 
+	    {
+			//did i successfully pass id from main? probably bad programming practice  and could have been done better.
+	    
+		Scanner sc = new Scanner(System.in);
+		ArrayList<ArrayList<Integer>> twoDFemaleArray = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> twoDFemaleCountArray = new ArrayList<ArrayList<Integer>>();
+		int id = sc.nextInt();
+		int count = 1;
+		while(id == count)
+			{
+				int i = 0;
+				int idMale = sc.nextInt();
+				i++;
+				int femaleCount = 0;
+				while(idMale>count+1)
+				{
+				
+					twoDFemaleArray.get(id).set(i,idMale);//this could be single array fairly easy but i dont want to change everything at moment.
+					//return idMale;
+					//twoDMaleAddOne(idMale);//set
+					femaleCount++;
+					idMale = sc.nextInt();
+				}
+			twoDFemaleCountArray.get(id).set(0, femaleCount);	
+			count++;		//counting these at the same time
+			id = idMale;	//will allow full iterization and composition of array
+			}
+		
+  }
+}
+	
